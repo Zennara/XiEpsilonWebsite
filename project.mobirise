@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Xi Epsilon",
-    "currentPage": "mailaddress.html",
+    "currentPage": "message.html",
     "theme": {
       "name": "mobirise5",
       "title": "Mobirise 5",
@@ -44,7 +44,7 @@
         "url": "https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
       }
     ],
-    "uniqCompNum": 29,
+    "uniqCompNum": 30,
     "versionPublish": "5.6.13",
     "imageResize": true,
     "screenshot": "screenshot.png",
@@ -64,18 +64,18 @@
     "witsec-mailform-to-alt": "",
     "witsec-mailform-from": "zennarayt@gmail.com",
     "witsec-mailform-from-them": false,
-    "witsec-mailform-from-them-replyto": false,
+    "witsec-mailform-from-them-replyto": true,
     "witsec-mailform-from-name": "Your Name",
     "witsec-mailform-from-name-them": false,
     "witsec-mailform-from-name-them-field": "{name}",
-    "witsec-mailform-template": "Hi,\n\nYou have received a new message from your website.\n\n{formdata}\n\nDate: {date}\nRemote IP: {ip}\n\n---\nHave a nice day.",
+    "witsec-mailform-template": "A new message has been sent from KapSig.org\n\n------\n{formdata}\n------\n\nDate: {date}\nRemote IP: {ip}",
     "witsec-mailform-autorespond-subjectprefix": "Re:",
     "witsec-mailform-autorespond-subject": "",
     "witsec-mailform-autorespond-template": "Hi {name},\n\nThank you for your message. We'll get back to you as soon as we can.\nHere's the information you sent us:\n\n{formdata}\n\n---\nHave a nice day.",
     "witsec-mailform-recaptcha": false,
     "witsec-mailform-recaptcha-version": "3",
-    "witsec-mailform-recaptcha-sitekey": "",
-    "witsec-mailform-recaptcha-secretkey": "",
+    "witsec-mailform-recaptcha-sitekey": "6Lc1E0YjAAAAAIpKm85coh9rC28Zg4ofF4xPw1Vj",
+    "witsec-mailform-recaptcha-secretkey": "6Lc1E0YjAAAAABYF6oyxnlTtW1nLqpMBYp6IWdCh",
     "witsec-mailform-recaptcha-score": "0.5",
     "witsec-mailform-disable-button": false,
     "witsec-mailform-smtp": false,
@@ -86,7 +86,8 @@
     "witsec-mailform-smtp-username": "",
     "witsec-mailform-smtp-password": "",
     "witsec-mailform-attachments": false,
-    "witsec-mailform-attachments-mimetypes": "application/gzip\napplication/java-archive\napplication/json\napplication/ld+json\napplication/msword\napplication/ogg\napplication/pdf\napplication/rtf\napplication/vnd.amazon.ebook\napplication/vnd.api+json\napplication/vnd.apple.installer+xml\napplication/vnd.mozilla.xul+xml\napplication/vnd.ms-excel\napplication/vnd.ms-fontobject\napplication/vnd.ms-powerpoint\napplication/vnd.oasis.opendocument.presentation\napplication/vnd.oasis.opendocument.spreadsheet\napplication/vnd.oasis.opendocument.text\napplication/vnd.openxmlformats-officedocument.presentationml.presentation\napplication/vnd.openxmlformats-officedocument.spreadsheetml.sheet\napplication/vnd.openxmlformats-officedocument.wordprocessingml.document\napplication/vnd.rar\napplication/vnd.visio\napplication/x-7z-compressed\napplication/x-abiword\napplication/x-bzip\napplication/x-bzip2\napplication/x-freearc\napplication/x-httpd-php\napplication/x-tar\napplication/x-www-form-urlencoded\napplication/xhtml+xml\napplication/xml\napplication/zip\napplication/zstd\naudio/*\nfont/*\nimage/*\nmultipart/form-data\ntext/plain\ntext/calendar\ntext/css\ntext/csv\ntext/rtf\nvideo/*"
+    "witsec-mailform-attachments-mimetypes": "application/gzip\napplication/java-archive\napplication/json\napplication/ld+json\napplication/msword\napplication/ogg\napplication/pdf\napplication/rtf\napplication/vnd.amazon.ebook\napplication/vnd.api+json\napplication/vnd.apple.installer+xml\napplication/vnd.mozilla.xul+xml\napplication/vnd.ms-excel\napplication/vnd.ms-fontobject\napplication/vnd.ms-powerpoint\napplication/vnd.oasis.opendocument.presentation\napplication/vnd.oasis.opendocument.spreadsheet\napplication/vnd.oasis.opendocument.text\napplication/vnd.openxmlformats-officedocument.presentationml.presentation\napplication/vnd.openxmlformats-officedocument.spreadsheetml.sheet\napplication/vnd.openxmlformats-officedocument.wordprocessingml.document\napplication/vnd.rar\napplication/vnd.visio\napplication/x-7z-compressed\napplication/x-abiword\napplication/x-bzip\napplication/x-bzip2\napplication/x-freearc\napplication/x-httpd-php\napplication/x-tar\napplication/x-www-form-urlencoded\napplication/xhtml+xml\napplication/xml\napplication/zip\napplication/zstd\naudio/*\nfont/*\nimage/*\nmultipart/form-data\ntext/plain\ntext/calendar\ntext/css\ntext/csv\ntext/rtf\nvideo/*",
+    "witsec-mailform-recaptcha-hidebadge": false
   },
   "pages": {
     "index.html": {
@@ -3737,6 +3738,31 @@
         {
           "alias": false,
           "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            ".mbr-section-title": {
+              "text-align": "center"
+            },
+            ".frame": {
+              "min-height": "(@height * 100px)"
+            }
+          },
+          "_name": "design-block",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content5\" group=\"Content\">\n    <mbr-parameters>\n        <header>IFRAME BLOCK</header>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"12\" step=\"1\">\n        <input type=\"range\" inline title=\"Height\" name=\"height\" min=\"0\" max=\"11\" step=\"1\" value=\"11\">\n        <header>Iframe Link</header>\n        <input type=\"text\" inline title=\"link\" name=\"link\" value=\"https://docs.google.com/forms/d/e/1FAIpQLSdNm_krpEzMMYLRLkbjqxbvxGLoIEuYe-MgzXuVozHtYo8WDg/viewform\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Show Iframe\" name=\"showiframe\" checked>\n        <input type=\"checkbox\" title=\"Title\" name=\"showMainTitle\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-12 col-lg-{{textWidth}} frame\">\n                <div class=\"col-12\" style=\"margin-bottom: 20px;\" mbr-if=\"showMainTitle\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\">\n                    <b>IFRAME BLOCK</b></h3>\n                </div>\n                <iframe mbr-if=\"showiframe\" allow=\"camera; microphone; fullscreen; autoplay\" src=\"{{link}}\" style=\"height: 100%; width: 100%; border: 0px;\"></iframe>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "XAAEZqRnxS",
+          "_anchor": "design-block-XAAEZqRnxS",
+          "_sourceTheme": "mobirise5",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
             "& when not (@sticky)": {
               ".navbar-dropdown": {
                 "position": "relative !important"
@@ -4267,7 +4293,7 @@
             }
           },
           "_name": "design-block",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content5\" group=\"Content\">\n    <mbr-parameters>\n        <header>IFRAME BLOCK</header>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"7\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"8\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"11\" step=\"1\">\n        <input type=\"range\" inline title=\"Height\" name=\"height\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Iframe Link</header>\n        <input type=\"text\" inline title=\"link\" name=\"link\" value=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.286521957374!2d-80.38640735274342!3d41.41129857050488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8833b6c3ae09f865%3A0xa9dc21968c3551eb!2s58%20College%20Ave%2C%20Greenville%2C%20PA%2016125!5e0!3m2!1sen!2sus!4v1669805428361!5m2!1sen!2sus\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Show Iframe\" name=\"showiframe\" checked>\n        <input type=\"checkbox\" title=\"Title\" name=\"showMainTitle\" checked>\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-12 col-lg-{{textWidth}} frame\">\n                <div class=\"col-12\" style=\"margin-bottom: 20px;\" mbr-if=\"showMainTitle\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\"><b>Our Address</b></h3>\n                </div>\n                <iframe mbr-if=\"showiframe\" allow=\"camera; microphone; fullscreen; autoplay\" src=\"{{link}}\" style=\"height: 100%; width: 100%; border: 0px;\"></iframe>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content5\" group=\"Content\">\n    <mbr-parameters>\n        <header>IFRAME BLOCK</header>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"8\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"8\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"11\" step=\"1\">\n        <input type=\"range\" inline title=\"Height\" name=\"height\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Iframe Link</header>\n        <input type=\"text\" inline title=\"link\" name=\"link\" value=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.286521957374!2d-80.38640735274342!3d41.41129857050488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8833b6c3ae09f865%3A0xa9dc21968c3551eb!2s58%20College%20Ave%2C%20Greenville%2C%20PA%2016125!5e0!3m2!1sen!2sus!4v1669805428361!5m2!1sen!2sus\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Show Iframe\" name=\"showiframe\" checked>\n        <input type=\"checkbox\" title=\"Title\" name=\"showMainTitle\" checked>\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-12 col-lg-{{textWidth}} frame\">\n                <div class=\"col-12\" style=\"margin-bottom: 20px;\" mbr-if=\"showMainTitle\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\"><b>Our Address</b></h3>\n                </div>\n                <iframe mbr-if=\"showiframe\" allow=\"camera; microphone; fullscreen; autoplay\" src=\"{{link}}\" style=\"height: 100%; width: 100%; border: 0px;\"></iframe>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "3FEnQos6J5",
           "_anchor": "design-block-3FEnQos6J5",
           "_sourceTheme": "mobirise5",
